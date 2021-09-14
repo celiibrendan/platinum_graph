@@ -1,0 +1,20 @@
+attribute,description,Units
+synapse_id,unique identifier for the synapse,
+synapse_size,(EM voxels) scaled by (4x4x40),EM
+synapse_x,"x coordinate of synapse centroid in EM voxels (x: 4nm, y: 4nm, z: 40nm). From Allen 'ctr_pt_position'.",EM
+synapse_y,"y coordinate of centroid in EM voxels (x: 4nm, y: 4nm, z: 40nm). From Allen 'ctr_pt_position'.",EM
+synapse_z,"z coordinate of centroid in EM voxels (x: 4nm, y: 4nm, z: 40nm). From Allen 'ctr_pt_position'",EM
+presyn_limb_idx,presyn id of neurite protrusion from soma synapse is located on,
+presyn_branch_idx,presyn id of non-branching segment of neurite limb skeleton synapse is located on,
+presyn_compartment_coarse,"presyn broad neurite compartment category for synapse: soma, axon or dendrite",
+presyn_compartment_fine,"presyn finer neurite compartment category for synapse: inhibitory,basal,apicaltuft,apicalshaft,oblique,apical(not apicaltuft,apicalshaft or oblique)",
+presyn_nucleus_id,presyn id of nucleus for segment from the flat segmentation  Equivalent to Allen: 'id',
+presyn_skeletal_distance_to_soma,presyn skeletal walk distance from closest skeletal point of the synapse to soma ,nm
+presyn_spine_bouton,"presyn spine or bouton category for synapse: no label = soma, head = spine head, neck = spine neck, shaft = not on spine, nohead = on spine but no head/neck distinction made, bouton = on identified axon bouton, nonbouton = not on identified axon bouton",
+postsyn_limb_idx,postsyn id of neurite protrusion from soma synapse is located on,
+postsyn_branch_idx,postsyn id of non-branching segment of neurite limb skeleton synapse is located on,
+postsyn_compartment_coarse,"postsyn broad neurite compartment category for synapse: soma, axon or dendrite",
+postsyn_compartment_fine,"postsyn finer neurite compartment category for synapse: inhibitory,basal,apicaltuft,apicalshaft,oblique,apical(not apicaltuft,apicalshaft or oblique)",
+postsyn_nucleus_id,postsyn id of nucleus for segment from the flat segmentation  Equivalent to Allen: 'id',
+postsyn_skeletal_distance_to_soma,postsyn skeletal walk distance from closest skeletal point of the synapse to soma ,nm
+postsyn_spine_bouton,"postsyn spine or bouton category for synapse: no label = soma, head = spine head, neck = spine neck, shaft = not on spine, nohead = on spine but no head/neck distinction made, bouton = on identified axon bouton, nonbouton = not on identified axon bouton",

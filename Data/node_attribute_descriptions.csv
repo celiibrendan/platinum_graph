@@ -1,0 +1,238 @@
+attribute,description,Units
+u,combined unique name of {segment_id}_{segment_split_id},
+segment_id,segment id unique within each Segmentation,
+segment_split_id,unique id for each single soma neuron split from the segment id,
+visual_area,"visual area (['AL', 'RL', 'V1']) of the location of soma center",
+layer,"layer (['L1', 'L2/L3', 'L4', 'L5', 'L6', 'WM']) of the location of soma center",
+multiplicity,the total number of single soma neurons extracted from segment_id,
+cell_type_used,"cell typing method used to decide the proofreading rules applied: ""baylor"" or ""allen""",
+cell_type,inhibitory or excitatory,
+nucleus_id,closest nucleus id matched to the soma center within a 15000 nm bounding box around soma center,
+nuclei_distance,the distance to the closest nuclei paired to that segment id (even if no matching nuclei found within threshold),nm
+n_nuclei_in_radius,Number of nuclei detected within a 15000 nm radius of the soma center,
+n_nuclei_in_bbox,Number of nuclei within the bounding box of that soma mesh,
+soma_x,"x coordinate of soma center in EM voxels (x: 4nm, y: 4nm, z: 40nm)",EM
+soma_y,"y coordinate of soma center in EM voxels (x: 4nm, y: 4nm, z: 40nm)",EM
+soma_z,"z coordinate of soma center in EM voxels (x: 4nm, y: 4nm, z: 40nm)",EM
+soma_x_nm,x coordinate of soma center in nm (helps match to neuron skeleton soma point),nm
+soma_y_nm,y coordinate of soma center in nm (helps match to neuron skeleton soma point),nm
+soma_z_nm,z coordinate of soma center in nm (helps match to neuron skeleton soma point),nm
+max_soma_n_faces,number of faces in soma mesh,
+max_soma_volume,volume of the soma mesh,um^3
+max_soma_area,surface area of soma mesh,um^2
+syn_density_post_after_proof,# of postsyns / skeletal length (um) on dendrite branches within 110000 nm skeletal walk of soma ,number of items per um
+syn_density_head_after_proof,# of head synapses / skeletal length (um) on dendritic branches within 110000 nm skeletal walk of soma ,number of items per um
+syn_density_neck_after_proof,# of neck synapses / skeletal length (um) on dendritic branches within 110000 nm skeletal walk of soma ,number of items per um
+syn_density_shaft_after_proof,# of shaft synapses / skeletal length (um) on dendritic branches within 110000 nm skeletal walk of soma ,number of items per um
+skeletal_length_processed_syn_after_proof,length of skeleton processed for synaptic density dendritic branches within 110000 nm skeletal walk of soma ,nm
+spine_density_after_proof,# of spines / skeletal length (um) on dendritic branches within 110000 nm skeletal walk of soma  ,number of items per um
+skeletal_length_processed_spine_after_proof,length of skeleton processed for spine density dendritic branches within 110000 nm skeletal walk of soma ,nm
+baylor_e_i_after_proof,inhibitory/excitatory cell type predicted by baylor method (synapse/spine density) after proofreading,
+baylor_e_i,inhibitory/excitatory cell type predicted by baylor method (synapse/spine density) before proofreading and axon identification,
+allen_e_i,inhibitory/excitatory cell type predicted by allen (nucleus method) before proofreading and axon identification,
+cell_type_used_for_axon,"cell typing method used to decide the axon identification rules applied: ""baylor"" or ""allen"" (this was done before ""baylor"" method was validated)",
+cell_type_for_axon,inhibitory or excitatory class before cell,
+allen_e_i_n_nuc,number of nuclei detected for segment from e/i table,
+allen_cell_type,"Specific excitatory or inhibitory cell type: excitatory = ['23P', '4P', '5P_IT', '5P_NP', '5P_PT', '6CT', '6IT',] inhibitory = [ 'BC', 'BPC','MC', 'NGC',] ",
+allen_cell_type_n_nuc,number of nuclei detected for segment from cell type table,
+allen_cell_type_e_i,excitatory inhibitory classifcation from allen cell type table,
+axon_angle_max,maximum axon projection angles (top of volume is 0 degrees),
+axon_angle_min,minimum axon projection angles (top of volume is 0 degrees),
+n_axon_angles,minimum axon projection angles (top of volume is 0 degrees),
+n_vertices,,
+n_faces,,
+n_not_processed_soma_containing_meshes,,
+n_error_limbs,,
+n_same_soma_multi_touching_limbs,,
+n_multi_soma_touching_limbs,,
+n_somas,,
+n_limbs,number of neurite protrustions from soma,
+n_branches,total number of non-branching segments in all of limbs,
+max_limb_n_branches,,
+skeletal_length,,nm
+max_limb_skeletal_length,,nm
+median_branch_length,,
+width_median,,
+width_no_spine_median,,
+width_90_perc,,
+width_no_spine_90_perc,,
+n_spines,number of spines detected on dendritc branches,
+n_boutons,number of boutons detected on axon branches,
+spine_density,# of spines / total neuron skeletal length (nm),nm
+spines_per_branch,# of spines / total number of branches,
+skeletal_length_eligible,# of spines / total neuron skeletal length in which spine detection was run,nm
+n_spine_eligible_branches,# of spines / total number of branches,
+spine_density_eligible,,nm
+spines_per_branch_eligible,# of spines / total number of branches in which spine detection was run,
+total_spine_volume,,um^3
+spine_volume_median,,um^3
+spine_volume_density,,um^3
+spine_volume_density_eligible,,um^3
+spine_volume_per_branch_eligible,,um^3
+dendrite_skeletal_length,,nm
+dendrite_area,,um^2
+dendrite_mesh_volume,,um^3
+dendrite_n_branches,,
+axon_skeletal_length,,nm
+axon_area,,um^2
+axon_mesh_volume,,um^3
+axon_n_branches,,
+basal_skeletal_length,,nm
+basal_area,,um^2
+basal_mesh_volume,,um^3
+basal_n_branches,,
+apical_skeletal_length,,nm
+apical_area,,um^2
+apical_mesh_volume,,um^3
+apical_n_branches,,
+apical_tuft_skeletal_length,,nm
+apical_tuft_area,,um^2
+apical_tuft_mesh_volume,,um^3
+apical_tuft_n_branches,,
+apical_shaft_skeletal_length,,nm
+apical_shaft_area,,um^2
+apical_shaft_mesh_volume,,um^3
+apical_shaft_n_branches,,
+oblique_skeletal_length,,nm
+oblique_area,,um^2
+oblique_mesh_volume,,um^3
+oblique_n_branches,,
+apical_total_skeletal_length,,nm
+apical_total_area,,um^2
+apical_total_mesh_volume,,um^3
+apical_total_n_branches,,
+n_syn_valid,,
+n_syn_valid_pre,,
+n_syn_valid_post,,
+n_syn_error,,
+n_syn_error_pre,,
+n_syn_error_post,,
+n_syn_presyns_on_dendrite,,
+n_syn_mesh_errored,,
+n_syn_distance_errored,,
+n_syn_no_label,,
+n_syn_head,,
+n_syn_neck,,
+n_syn_shaft,,
+n_syn_no_head,,
+n_syn_bouton,,
+n_syn_non_bouton,,
+n_syn_dendrite,,
+n_syn_axon,,
+n_syn_basal,,
+n_syn_apical,,
+n_syn_apical_tuft,,
+n_syn_apical_shaft,,
+n_syn_oblique,,
+n_syn_soma,,
+n_syn_apical_total,,
+n_syn_dendrite_head_postsyn,,
+n_syn_dendrite_neck_postsyn,,
+n_syn_dendrite_shaft_postsyn,,
+n_syn_dendrite_no_head_postsyn,,
+n_syn_axon_bouton_presyn,,
+n_syn_axon_bouton_postsyn,,
+n_syn_axon_non_bouton_presyn,,
+n_syn_axon_non_bouton_postsyn,,
+n_syn_basal_head_postsyn,,
+n_syn_basal_neck_postsyn,,
+n_syn_basal_shaft_postsyn,,
+n_syn_basal_no_head_postsyn,,
+n_syn_apical_head_postsyn,,
+n_syn_apical_neck_postsyn,,
+n_syn_apical_shaft_postsyn,,
+n_syn_apical_no_head_postsyn,,
+n_syn_apical_tuft_head_postsyn,,
+n_syn_apical_tuft_neck_postsyn,,
+n_syn_apical_tuft_shaft_postsyn,,
+n_syn_apical_tuft_no_head_postsyn,,
+n_syn_apical_shaft_head_postsyn,,
+n_syn_apical_shaft_neck_postsyn,,
+n_syn_apical_shaft_shaft_postsyn,,
+n_syn_apical_shaft_no_head_postsyn,,
+n_syn_oblique_head_postsyn,,
+n_syn_oblique_neck_postsyn,,
+n_syn_oblique_shaft_postsyn,,
+n_syn_oblique_no_head_postsyn,,
+n_syn_soma_no_label_presyn,,
+n_syn_soma_no_label_postsyn,,
+n_syn_apical_total_head_presyn,,
+n_syn_apical_total_head_postsyn,,
+n_syn_apical_total_neck_presyn,,
+n_syn_apical_total_neck_postsyn,,
+n_syn_apical_total_shaft_presyn,,
+n_syn_apical_total_shaft_postsyn,,
+n_syn_apical_total_no_head_presyn,,
+n_syn_apical_total_no_head_postsyn,,
+axon_branch_length_median,median skeletal length of branches (non branching segments),um
+axon_branch_length_mean,mean skeletal length of branches (non branching segments),um
+axon_n_short_branches,number of branches with skeletal length less than 6 um,
+axon_n_long_branches,number of branches with skeletal length greater than 100 um,
+axon_n_medium_branches,number of branches with skeletal length less than 100 um but greater than 6 um,
+axon_bbox_volume,volume of skeleton bounding box (nm^3 / 1_000_000_000_000_000),(nm^3 / 1_000_000_000_000_000)
+axon_bbox_x_min,x coordinate for compartment bounding box min,nm
+axon_bbox_x_min_soma_relative,x coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+axon_bbox_x_max,x coordinate for compartment bounding box max,nm
+axon_bbox_x_max_soma_relative,x coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+axon_bbox_y_min,y coordinate for compartment bounding box min,nm
+axon_bbox_y_min_soma_relative,y coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+axon_bbox_y_max,y coordinate for compartment bounding box max,nm
+axon_bbox_y_max_soma_relative,y coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+axon_bbox_z_min,z coordinate for compartment bounding box min,nm
+axon_bbox_z_min_soma_relative,z coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+axon_bbox_z_max,z coordinate for compartment bounding box max,nm
+axon_bbox_z_max_soma_relative,z coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+apical_branch_length_median,median skeletal length of branches (non branching segments),um
+apical_branch_length_mean,mean skeletal length of branches (non branching segments),um
+apical_n_short_branches,number of branches with skeletal length less than 6 um,
+apical_n_long_branches,number of branches with skeletal length greater than 100 um,
+apical_n_medium_branches,number of branches with skeletal length less than 100 um but greater than 6 um,
+apical_bbox_volume,volume of skeleton bounding box (nm^3 / 1_000_000_000_000_000),(nm^3 / 1_000_000_000_000_000)
+apical_bbox_x_min,x coordinate for compartment bounding box min,nm
+apical_bbox_x_min_soma_relative,x coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+apical_bbox_x_max,x coordinate for compartment bounding box max,nm
+apical_bbox_x_max_soma_relative,x coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+apical_bbox_y_min,y coordinate for compartment bounding box min,nm
+apical_bbox_y_min_soma_relative,y coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+apical_bbox_y_max,y coordinate for compartment bounding box max,nm
+apical_bbox_y_max_soma_relative,y coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+apical_bbox_z_min,z coordinate for compartment bounding box min,nm
+apical_bbox_z_min_soma_relative,z coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+apical_bbox_z_max,z coordinate for compartment bounding box max,nm
+apical_bbox_z_max_soma_relative,z coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+basal_branch_length_median,median skeletal length of branches (non branching segments),um
+basal_branch_length_mean,mean skeletal length of branches (non branching segments),um
+basal_n_short_branches,number of branches with skeletal length less than 6 um,
+basal_n_long_branches,number of branches with skeletal length greater than 100 um,
+basal_n_medium_branches,number of branches with skeletal length less than 100 um but greater than 6 um,
+basal_bbox_volume,volume of skeleton bounding box (nm^3 / 1_000_000_000_000_000),(nm^3 / 1_000_000_000_000_000)
+basal_bbox_x_min,x coordinate for compartment bounding box min,nm
+basal_bbox_x_min_soma_relative,x coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+basal_bbox_x_max,x coordinate for compartment bounding box max,nm
+basal_bbox_x_max_soma_relative,x coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+basal_bbox_y_min,y coordinate for compartment bounding box min,nm
+basal_bbox_y_min_soma_relative,y coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+basal_bbox_y_max,y coordinate for compartment bounding box max,nm
+basal_bbox_y_max_soma_relative,y coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+basal_bbox_z_min,z coordinate for compartment bounding box min,nm
+basal_bbox_z_min_soma_relative,z coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+basal_bbox_z_max,z coordinate for compartment bounding box max,nm
+basal_bbox_z_max_soma_relative,z coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+dendrite_branch_length_median,median skeletal length of branches (non branching segments),um
+dendrite_branch_length_mean,mean skeletal length of branches (non branching segments),um
+dendrite_n_short_branches,number of branches with skeletal length less than 6 um,
+dendrite_n_long_branches,number of branches with skeletal length greater than 100 um,
+dendrite_n_medium_branches,number of branches with skeletal length less than 100 um but greater than 6 um,
+dendrite_bbox_volume,volume of skeleton bounding box (nm^3 / 1_000_000_000_000_000),(nm^3 / 1_000_000_000_000_000)
+dendrite_bbox_x_min,x coordinate for compartment bounding box min,nm
+dendrite_bbox_x_min_soma_relative,x coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+dendrite_bbox_x_max,x coordinate for compartment bounding box max,nm
+dendrite_bbox_x_max_soma_relative,x coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+dendrite_bbox_y_min,y coordinate for compartment bounding box min,nm
+dendrite_bbox_y_min_soma_relative,y coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+dendrite_bbox_y_max,y coordinate for compartment bounding box max,nm
+dendrite_bbox_y_max_soma_relative,y coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
+dendrite_bbox_z_min,z coordinate for compartment bounding box min,nm
+dendrite_bbox_z_min_soma_relative,z coordinate for compartment bounding box min after soma center subtracted from all skeletal points,nm
+dendrite_bbox_z_max,z coordinate for compartment bounding box max,nm
+dendrite_bbox_z_max_soma_relative,z coordinate for compartment bounding box max after soma center subtracted from all skeletal points,nm
